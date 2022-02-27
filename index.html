@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<form action="mail.php" enctype="multipart/form-data" class="form" method="POST">
+		<input type="hidden" name="admin_email[]" value="krot@yandex.ru"><!--Свой адрес-->
+		<input type="hidden" name="form_subject" value="Тема письма">
+		<h2>Отправка формы</h2>
+		<label class="form__label">
+			<span>Введите имя</span>
+			<input type="text" name="name">
+		</label>
+		<label class="form__label">
+			<span>Введите телефон</span>
+			<input type="tel" data-validate-field="tel" name="tel">
+		</label>
+		<label class="form__label">
+			<span>Введите email</span>
+			<input type="email" data-validate-field="email" name="email">
+		</label>
+		<label class="form__label file-label">
+			<span>Прикрепить файл</span>
+			<input type="file" name="file[]" multiple>
+		</label>
+		<button type="submit">Отправить</button>
+	</form>
+	<script src="js/inputmask.min.js"></script>
+	<script src="js/just-validate.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
